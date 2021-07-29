@@ -10,7 +10,10 @@
 
 muduo库的日志输出是C++的stream风格，使用方便，而且是线程安全的。（线程安全的Singleton）
 
-### 日志输出格式![image-20210729161522540](C:\Users\mars\AppData\Roaming\Typora\typora-user-images\image-20210729161522540.png)
+### 日志输出格式
+
+![image-20210729161522540](https://user-images.githubusercontent.com/50821178/127523872-516d9154-b582-49d5-8051-a71484411192.png)
+
 
 示例：**20210729 08:00:00.565854Z 37081 DEBUG main debug - Logging_test.cc:65**
 
@@ -68,7 +71,8 @@ muduo库采取的方法用一个背景线程负责收集日志消息，并写入
 
 1、**单线程写100万条日志的效率** 
 
-![image-20210729160143515](C:\Users\mars\AppData\Roaming\Typora\typora-user-images\image-20210729160143515.png)
+![image-20210729160143515](https://user-images.githubusercontent.com/50821178/127523988-b44f8a5b-e92c-4ae2-8fe6-da399beac43b.png)
+
 
 吞吐量每秒达269.32 MiB/s
 
@@ -76,4 +80,4 @@ muduo库采取的方法用一个背景线程负责收集日志消息，并写入
 利用线程池中的线程写，效率极高；
 示例：写300W次小字节数据，所花时间。
 
-![image-20210729174510373](C:\Users\mars\AppData\Roaming\Typora\typora-user-images\image-20210729174510373.png)
+![image-20210729174510373](https://user-images.githubusercontent.com/50821178/127524024-ac15b963-328e-49ba-85c4-25c3c61011a7.png)
