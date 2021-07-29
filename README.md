@@ -81,3 +81,9 @@ muduo库采取的方法用一个背景线程负责收集日志消息，并写入
 示例：写300W次小字节数据，所花时间。
 
 ![image-20210729174510373](https://user-images.githubusercontent.com/50821178/127524024-ac15b963-328e-49ba-85c4-25c3c61011a7.png)
+
+### 使用实例
+chmod 755 build.sh
+./build.sh
+或者
+mkdir build; cd build; cmake ../ 
